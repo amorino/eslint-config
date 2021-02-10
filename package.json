@@ -27,5 +27,13 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amorino/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amorino/eslint-config/issues"
+  },
+  "homepage": "https://github.com/amorino/eslint-config#readme"
 }
