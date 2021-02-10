@@ -1,12 +1,8 @@
-/**
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @format
- */
+"use strict";
 
 module.exports = {
+  parser: "@typescript-eslint/parser",
+
   env: {
     browser: true,
     node: true,
@@ -20,8 +16,10 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    project: "tsconfig.json",
+    project: "./tsconfig.json",
   },
+
+  plugins: ["@typescript-eslint", "react", "react-hooks", "prettier", "jest"],
 
   extends: [
     "eslint:recommended",
@@ -33,8 +31,6 @@ module.exports = {
     "plugin:prettier/recommended", // https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
     "prettier/react",
   ],
-
-  plugins: ["@typescript-eslint", "react", "react-hooks", "prettier", "jest"],
 
   settings: {
     react: {
