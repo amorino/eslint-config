@@ -36,6 +36,22 @@ module.exports = {
      * The following rules are made available via `eslint-plugin-react-native`.
      */
     "react-native/no-raw-text": ["error", { skip: ["Animated.Text"] }],
+    /**
+     * Import plugin
+     * The following rules are made available via `eslint-plugin-import`.
+     */
+    "import/order": [
+      "error",
+      {
+        groups: ["external", "builtin", ["sibling", "parent"]],
+        pathGroups: [
+          {
+            pattern: "~/**",
+            group: "internal",
+          },
+        ],
+      },
+    ],
   },
   settings: {
     react: {

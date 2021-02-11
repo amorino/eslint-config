@@ -58,18 +58,6 @@ module.exports = {
      * Import plugin
      * The following rules are made available via `eslint-plugin-import`.
      */
-    "import/order": [
-      "error",
-      {
-        groups: ["external", "builtin", ["sibling", "parent"]],
-        pathGroups: [
-          {
-            pattern: "~/**",
-            group: "internal",
-          },
-        ],
-      },
-    ],
     "import/prefer-default-export": "off",
   },
   settings: {

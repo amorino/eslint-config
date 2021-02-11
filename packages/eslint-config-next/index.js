@@ -37,6 +37,22 @@ module.exports = {
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/accessible-emoji": "off",
+    /**
+     * Import plugin
+     * The following rules are made available via `eslint-plugin-import`.
+     */
+    "import/order": [
+      "error",
+      {
+        groups: ["external", "builtin", ["sibling", "parent"]],
+        pathGroups: [
+          {
+            pattern: "~/**",
+            group: "internal",
+          },
+        ],
+      },
+    ],
   },
 
   settings: {
