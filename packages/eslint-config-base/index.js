@@ -58,19 +58,18 @@ module.exports = {
      * Import plugin
      * The following rules are made available via `eslint-plugin-import`.
      */
-    "import/extensions": [
+    "import/order": [
       "error",
-      "always",
       {
-        js: "never",
-        jsx: "never",
-        ts: "never",
-        tsx: "never",
-        hbs: "never",
-        vue: "never",
+        groups: ["external", "builtin", ["sibling", "parent"]],
+        pathGroups: [
+          {
+            pattern: "~/**",
+            group: "internal",
+          },
+        ],
       },
     ],
-    "import/order": ["error", { groups: ["external", "builtin", ["sibling", "parent"]] }],
     "import/prefer-default-export": "off",
   },
 };
