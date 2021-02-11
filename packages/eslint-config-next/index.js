@@ -24,7 +24,6 @@ module.exports = {
      * React Plugin
      * The following rules are made available via `eslint-plugin-react`.
      */
-    "react/prop-types": "off",
     "react/display-name": "off",
     "react/jsx-filename-extension": [
       1,
@@ -66,4 +65,40 @@ module.exports = {
       },
     },
   },
+
+  overrides: [
+    {
+      files: ["*.tsx"],
+      rules: {
+        "react/prop-types": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            selector: "default",
+            format: ["strictCamelCase"],
+            leadingUnderscore: "forbid",
+            trailingUnderscore: "forbid",
+          },
+          {
+            selector: "typeLike",
+            format: ["StrictPascalCase"],
+          },
+          {
+            selector: "variable",
+            // Exception for FunctionComponents
+            format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
+          },
+          {
+            selector: "function",
+            // Exception for FunctionComponents
+            format: ["strictCamelCase", "StrictPascalCase"],
+          },
+          {
+            selector: "enumMember",
+            format: ["StrictPascalCase"],
+          },
+        ],
+      },
+    },
+  ],
 };
