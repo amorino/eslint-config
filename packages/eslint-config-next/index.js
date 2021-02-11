@@ -43,14 +43,6 @@ module.exports = {
     react: {
       version: "detect",
     },
-    "import/resolver": {
-      typescript: {
-        alwaysTryTypes: true,
-      },
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
-      },
-    },
   },
 
   overrides: [
