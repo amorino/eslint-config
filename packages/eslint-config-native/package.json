@@ -1,8 +1,11 @@
 {
   "name": "@amorino/eslint-config-native",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Personal ESLint config for React Native using TypeScript",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "eslint",
     "react",
@@ -13,7 +16,7 @@
   "author": "Erick Bazán <erick.bazan@me.com>",
   "license": "MIT",
   "dependencies": {
-    "@amorino/eslint-config-base": "workspace:packages/eslint-config-base",
+    "@amorino/eslint-config-base": "^1.0.3",
     "@react-native-community/eslint-config": "^2.0.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
