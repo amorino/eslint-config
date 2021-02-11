@@ -1,18 +1,17 @@
-"use strict";
-
 module.exports = {
-  parser: "@typescript-eslint/parser",
+  extends: [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier/react",
+    "plugin:react-native/all",
+    require.resolve("@amorino/eslint-config-base"),
+  ],
 
   env: {
-    node: true,
-    "jest/globals": true,
-    "react-native/react-native": true,
-    es2020: true,
+    "react-native/react-native": true
   },
 
   parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
@@ -21,21 +20,9 @@ module.exports = {
 
   ignorePatterns: ["/*.*"],
 
-  plugins: ["@typescript-eslint", "react-native"],
-
-  extends: [
-    "plugin:@typescript-eslint/recommended",
-    "@react-native-community",
-    "plugin:react-native/all",
-    "plugin:prettier/recommended",
-    "prettier/@typescript-eslint",
-  ],
+  plugins: ["react-native"],
 
   rules: {
-    /**
-     * General
-     */
-    "no-underscore-dangle": "off",
     /**
      * React Plugin
      * The following rules are made available via `eslint-plugin-react`.
@@ -56,12 +43,9 @@ module.exports = {
     ],
     "react/no-unescaped-entities": "off",
     /**
-     * Prettier plugin
-     * The following rules are made available via `eslint-plugin-prettier`.
+     * React Native plugin
+     * The following rules are made available via `@typescript-eslint/eslint-plugin`.
      */
-    "prettier/prettier": "error",
-
-    "@typescript-eslint/explicit-module-boundary-types": "off",
     "react-native/no-raw-text": [
       2,
       {
