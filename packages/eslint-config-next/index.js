@@ -74,7 +74,6 @@ module.exports = {
             leadingUnderscore: "forbid",
             trailingUnderscore: "forbid",
             filter: {
-              // you can expand this regex to add more allowed names
               regex: "^(Component|App|Page|AppTree)$",
               match: false,
             },

@@ -76,6 +76,10 @@ module.exports = {
             format: ["strictCamelCase"],
             leadingUnderscore: "forbid",
             trailingUnderscore: "forbid",
+            filter: {
+              regex: "^(Component|App|Screen|AppTree)$",
+              match: false,
+            },
           },
           {
             selector: "typeLike",
