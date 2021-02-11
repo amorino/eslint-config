@@ -1,6 +1,6 @@
 {
   "name": "@amorino/eslint-config-native",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Personal ESLint config for React Native using TypeScript",
   "main": "index.js",
   "publishConfig": {
