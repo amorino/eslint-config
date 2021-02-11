@@ -78,6 +78,11 @@ module.exports = {
             format: ["strictCamelCase"],
             leadingUnderscore: "forbid",
             trailingUnderscore: "forbid",
+            filter: {
+              // you can expand this regex to add more allowed names
+              regex: "^(Component|App|Page|AppTree)$",
+              match: false,
+            },
           },
           {
             selector: "typeLike",
@@ -87,21 +92,11 @@ module.exports = {
             selector: "variable",
             // Exception for FunctionComponents
             format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
-            filter: {
-              // you can expand this regex to add more allowed names
-              regex: "^(Component|Page|AppTree)$",
-              match: false,
-            },
           },
           {
             selector: "function",
             // Exception for FunctionComponents
             format: ["strictCamelCase", "StrictPascalCase"],
-            filter: {
-              // you can expand this regex to add more allowed names
-              regex: "^(Component|Page|AppTree)$",
-              match: false,
-            },
           },
           {
             selector: "enumMember",
