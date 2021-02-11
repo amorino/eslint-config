@@ -54,5 +54,23 @@ module.exports = {
         format: ["StrictPascalCase"],
       },
     ],
+    /**
+     * Import plugin
+     * The following rules are made available via `eslint-plugin-import`.
+     */
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+        hbs: "never",
+        vue: "never",
+      },
+    ],
+    "import/order": ["error", { groups: ["external", "builtin", ["sibling", "parent"]] }],
+    "import/prefer-default-export": "off",
   },
 };

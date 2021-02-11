@@ -25,24 +25,11 @@ module.exports = {
      * The following rules are made available via `eslint-plugin-react`.
      */
     "react/display-name": "off",
-    "react/jsx-filename-extension": [
-      1,
-      {
-        extensions: [".ts", ".tsx"],
-      },
-    ],
-    "react/jsx-props-no-spreading": [
-      "error",
-      {
-        custom: "ignore",
-      },
-    ],
+    "react/jsx-filename-extension": ["error", { extensions: [".ts", ".tsx"] }],
+    "react/jsx-props-no-spreading": ["error", { custom: "ignore" }],
     "react/no-unescaped-entities": "off",
-    /**
-     * Import plugin
-     * The following rules are made available via `eslint-plugin-import`.
-     */
-    "import/extensions": "off",
+    "react/no-this-in-sfc": "error",
+    "react/no-unused-prop-types": "error",
     /**
      * jsx-a11y plugin
      * The following rules are made available via `eslint-plugin-jsx-a11y`.

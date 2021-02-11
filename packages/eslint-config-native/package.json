@@ -17,10 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "@amorino/eslint-config-base": "^1.0.4",
-    "@react-native-community/eslint-config": "^2.0.0",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-react-native": "^3.10.0"
+    "@react-native-community/eslint-config": "^2.0.0"
   },
   "repository": {
     "type": "git",

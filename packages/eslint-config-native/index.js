@@ -1,14 +1,12 @@
 module.exports = {
   extends: [
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "prettier/react",
+    "@react-native-community",
     "plugin:react-native/all",
     require.resolve("@amorino/eslint-config-base"),
   ],
 
   env: {
-    "react-native/react-native": true
+    "react-native/react-native": true,
   },
 
   parserOptions: {
@@ -20,38 +18,24 @@ module.exports = {
 
   ignorePatterns: ["/*.*"],
 
-  plugins: ["react-native"],
+  plugins: ["react", "react-native"],
 
   rules: {
     /**
      * React Plugin
      * The following rules are made available via `eslint-plugin-react`.
      */
-    "react/prop-types": "off",
     "react/display-name": "off",
-    "react/jsx-filename-extension": [
-      1,
-      {
-        extensions: [".ts", ".tsx"],
-      },
-    ],
-    "react/jsx-props-no-spreading": [
-      "error",
-      {
-        custom: "ignore",
-      },
-    ],
+    "react/jsx-filename-extension": ["error", { extensions: [".ts", ".tsx"] }],
+    "react/jsx-props-no-spreading": ["error", { custom: "ignore" }],
     "react/no-unescaped-entities": "off",
+    "react/no-this-in-sfc": "error",
+    "react/no-unused-prop-types": "error",
     /**
      * React Native plugin
-     * The following rules are made available via `@typescript-eslint/eslint-plugin`.
+     * The following rules are made available via `eslint-plugin-react-native`.
      */
-    "react-native/no-raw-text": [
-      2,
-      {
-        skip: ["Animated.Text"],
-      },
-    ],
+    "react-native/no-raw-text": ["error", { skip: ["Animated.Text"] }],
   },
   settings: {
     react: {
