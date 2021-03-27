@@ -1,6 +1,6 @@
 {
   "name": "@amorino/eslint-config-next",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Personal ESLint config for Next.JS using TypeScript",
   "main": "index.js",
   "publishConfig": {
