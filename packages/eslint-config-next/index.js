@@ -51,6 +51,10 @@ module.exports = {
             group: "internal",
           },
         ],
+        alphabetize: {
+          order: "asc",
+          caseInsensitive: true,
+        },
       },
     ],
   },
