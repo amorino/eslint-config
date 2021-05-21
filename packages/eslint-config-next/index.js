@@ -47,6 +47,11 @@ module.exports = {
         groups: ["external", "builtin", ["sibling", "parent"]],
         pathGroups: [
           {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
             pattern: "~/**",
             group: "internal",
           },
