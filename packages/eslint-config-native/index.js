@@ -46,10 +46,20 @@ module.exports = {
         groups: ["external", "builtin", ["sibling", "parent"]],
         pathGroups: [
           {
+            pattern: "react+(|-native)",
+            group: "external",
+            position: "before",
+          },
+          {
             pattern: "~/**",
             group: "internal",
           },
         ],
+        pathGroupsExcludedImportTypes: ["react"],
+        alphabetize: {
+          order: "asc",
+          caseInsensitive: true,
+        },
       },
     ],
   },
@@ -59,12 +69,6 @@ module.exports = {
     },
   },
   overrides: [
-    {
-      files: ["**/*.js?(x)"],
-      rules: {
-        "@typescript-eslint/no-var-requires": "off",
-      },
-    },
     {
       files: ["*.tsx"],
       rules: {
