@@ -74,7 +74,7 @@ module.exports = {
           "error",
           {
             selector: "default",
-            format: ["strictCamelCase"],
+            format: ["camelCase"],
             leadingUnderscore: "forbid",
             trailingUnderscore: "forbid",
             filter: {
@@ -89,7 +89,7 @@ module.exports = {
           {
             selector: "variable",
             // Exception for FunctionComponents
-            format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
+            format: ["camelCase", "StrictPascalCase", "UPPER_CASE"],
           },
           {
             selector: "function",

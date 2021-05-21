@@ -14,14 +14,9 @@ module.exports = {
     project: "./tsconfig.json",
   },
 
-  plugins: ["@typescript-eslint", "import"],
+  plugins: ["import"],
 
-  extends: [
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:import/typescript",
-    "plugin:prettier/recommended",
-  ],
+  extends: ["plugin:prettier/recommended"],
 
   rules: {
     /**
@@ -29,37 +24,50 @@ module.exports = {
      */
     "no-underscore-dangle": "off",
     /**
-     * TypeScript plugin
-     * The following rules are made available via `@typescript-eslint/eslint-plugin`.
-     */
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {
-        selector: "default",
-        format: ["strictCamelCase"],
-        leadingUnderscore: "forbid",
-        trailingUnderscore: "forbid",
-      },
-      {
-        selector: "typeLike",
-        format: ["StrictPascalCase"],
-      },
-      {
-        selector: "variable",
-        format: ["strictCamelCase", "UPPER_CASE"],
-      },
-      {
-        selector: "enumMember",
-        format: ["StrictPascalCase"],
-      },
-    ],
-    /**
      * Import plugin
      * The following rules are made available via `eslint-plugin-import`.
      */
     "import/prefer-default-export": "off",
   },
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      plugins: ["@typescript-eslint"],
+      extends: [
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:import/typescript",
+      ],
+      rules: {
+        /**
+         * TypeScript plugin
+         * The following rules are made available via `@typescript-eslint/eslint-plugin`.
+         */
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            selector: "default",
+            format: ["strictCamelCase"],
+            leadingUnderscore: "forbid",
+            trailingUnderscore: "forbid",
+          },
+          {
+            selector: "typeLike",
+            format: ["StrictPascalCase"],
+          },
+          {
+            selector: "variable",
+            format: ["strictCamelCase", "UPPER_CASE"],
+          },
+          {
+            selector: "enumMember",
+            format: ["StrictPascalCase"],
+          },
+        ],
+      },
+    },
+  ],
   settings: {
     "import/resolver": {
       node: {
