@@ -1,6 +1,6 @@
 {
   "name": "@amorino/eslint-config-base",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Personal Base ESLint config using TypeScript",
   "main": "index.js",
   "keywords": [
