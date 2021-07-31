@@ -54,7 +54,7 @@ module.exports = {
           },
           {
             selector: "typeLike",
-            format: ["StrictPascalCase"],
+            format: ["PascalCase"],
           },
           {
             selector: "variable",
