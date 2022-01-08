@@ -63,41 +63,49 @@ module.exports = {
     ],
 
     "react/prop-types": "off",
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {
-        selector: "default",
-        format: ["strictCamelCase"],
-        leadingUnderscore: "forbid",
-        trailingUnderscore: "forbid",
-        filter: {
-          regex: "^(Component|App|Screen|AppTree)$",
-          match: false,
-        },
-      },
-      {
-        selector: "typeLike",
-        format: ["StrictPascalCase"],
-      },
-      {
-        selector: "variable",
-        // Exception for FunctionComponents
-        format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
-      },
-      {
-        selector: "function",
-        // Exception for FunctionComponents
-        format: ["strictCamelCase", "StrictPascalCase"],
-      },
-      {
-        selector: "enumMember",
-        format: ["StrictPascalCase"],
-      },
-    ],
   },
   settings: {
     react: {
       version: "detect",
     },
   },
+  overrides: [
+    {
+      files: ["*.tsx"],
+      rules: {
+        "react/prop-types": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            selector: "default",
+            format: ["strictCamelCase"],
+            leadingUnderscore: "forbid",
+            trailingUnderscore: "forbid",
+            filter: {
+              regex: "^(Component|App|Screen|AppTree)$",
+              match: false,
+            },
+          },
+          {
+            selector: "typeLike",
+            format: ["StrictPascalCase"],
+          },
+          {
+            selector: "variable",
+            // Exception for FunctionComponents
+            format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
+          },
+          {
+            selector: "function",
+            // Exception for FunctionComponents
+            format: ["strictCamelCase", "StrictPascalCase"],
+          },
+          {
+            selector: "enumMember",
+            format: ["StrictPascalCase"],
+          },
+        ],
+      },
+    },
+  ],
 };
