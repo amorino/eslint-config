@@ -2,7 +2,9 @@ module.exports = {
   parser: "@typescript-eslint/parser",
 
   env: {
+    browser: true,
     es2020: true,
+    node: true,
   },
 
   parserOptions: {
@@ -13,7 +15,12 @@ module.exports = {
     },
   },
 
-  plugins: ["import"],
+  globals: {
+    require: true,
+    process: true,
+  },
+
+  plugins: ["import", "unicorn"],
 
   extends: [
     "plugin:@typescript-eslint/recommended",
@@ -71,7 +78,6 @@ module.exports = {
         format: ["StrictPascalCase"],
       },
     ],
-
     "unicorn/prevent-abbreviations": [
       "error",
       {
@@ -100,10 +106,12 @@ module.exports = {
       "error",
       {
         cases: {
-          camelCase: true,
+          kebabCase: true,
           pascalCase: true,
         },
       },
     ],
+    "unicorn/prefer-module": "off",
+    "unicorn/no-abusive-eslint-disable": "off",
   },
 };
