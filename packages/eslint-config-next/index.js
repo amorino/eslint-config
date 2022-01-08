@@ -2,7 +2,6 @@ module.exports = {
   extends: [
     "next",
     "next/core-web-vitals",
-    "prettier/react",
     require.resolve("@amorino/eslint-config-base"),
   ],
 
