@@ -1,6 +1,6 @@
 {
   "name": "@amorino/eslint-config-native",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Personal ESLint config for React Native using TypeScript",
   "main": "index.js",
   "publishConfig": {
@@ -16,7 +16,7 @@
   "author": "Erick Bazán <erick.bazan@me.com>",
   "license": "MIT",
   "dependencies": {
-    "@amorino/eslint-config-base": "^1.0.19",
+    "@amorino/eslint-config-base": "^1.0.20",
     "@react-native-community/eslint-config": "^2.0.0"
   },
   "repository": {
