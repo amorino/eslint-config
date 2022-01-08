@@ -50,6 +50,7 @@ module.exports = {
       "error",
       {
         replacements: {
+          env: false,
           ref: false,
           refs: false,
           prop: false,
@@ -74,6 +75,7 @@ module.exports = {
       "error",
       {
         cases: {
+          camelCase: true,
           kebabCase: true,
           pascalCase: true,
         },
