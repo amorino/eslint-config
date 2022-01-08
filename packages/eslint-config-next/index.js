@@ -15,7 +15,6 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    project: "./tsconfig.json",
   },
 
   rules: {
@@ -62,6 +61,39 @@ module.exports = {
         },
       },
     ],
+
+    "react/prop-types": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        selector: "default",
+        format: ["camelCase"],
+        leadingUnderscore: "forbid",
+        trailingUnderscore: "forbid",
+        filter: {
+          regex: "^(Component|App|Page|AppTree)$",
+          match: false,
+        },
+      },
+      {
+        selector: "typeLike",
+        format: ["StrictPascalCase"],
+      },
+      {
+        selector: "variable",
+        // Exception for FunctionComponents
+        format: ["camelCase", "StrictPascalCase", "UPPER_CASE"],
+      },
+      {
+        selector: "function",
+        // Exception for FunctionComponents
+        format: ["strictCamelCase", "StrictPascalCase"],
+      },
+      {
+        selector: "enumMember",
+        format: ["StrictPascalCase"],
+      },
+    ],
   },
 
   settings: {
@@ -69,44 +101,4 @@ module.exports = {
       version: "detect",
     },
   },
-
-  overrides: [
-    {
-      files: ["*.tsx"],
-      rules: {
-        "react/prop-types": "off",
-        "@typescript-eslint/naming-convention": [
-          "error",
-          {
-            selector: "default",
-            format: ["camelCase"],
-            leadingUnderscore: "forbid",
-            trailingUnderscore: "forbid",
-            filter: {
-              regex: "^(Component|App|Page|AppTree)$",
-              match: false,
-            },
-          },
-          {
-            selector: "typeLike",
-            format: ["StrictPascalCase"],
-          },
-          {
-            selector: "variable",
-            // Exception for FunctionComponents
-            format: ["camelCase", "StrictPascalCase", "UPPER_CASE"],
-          },
-          {
-            selector: "function",
-            // Exception for FunctionComponents
-            format: ["strictCamelCase", "StrictPascalCase"],
-          },
-          {
-            selector: "enumMember",
-            format: ["StrictPascalCase"],
-          },
-        ],
-      },
-    },
-  ],
 };
