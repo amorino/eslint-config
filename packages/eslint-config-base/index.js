@@ -71,5 +71,39 @@ module.exports = {
         format: ["StrictPascalCase"],
       },
     ],
+
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        replacements: {
+          ref: false,
+          refs: false,
+          prop: false,
+          props: false,
+          src: false,
+          param: false,
+          params: false,
+          args: false,
+          elm: {
+            element: true,
+          },
+        },
+        allowList: {
+          attr: true,
+          argTypes: true,
+        },
+        checkProperties: true,
+      },
+    ],
+    "unicorn/no-null": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        cases: {
+          camelCase: true,
+          pascalCase: true,
+        },
+      },
+    ],
   },
 };
