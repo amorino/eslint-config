@@ -4,12 +4,8 @@
 ## Installation
 
 ```
-yarn add --dev eslint prettier @amorino/eslint-config-next
+npm i --dev eslint prettier @amorino/eslint-config-next
 ```
-
-*Note: I'm using `yarn` to install deps. Feel free to change commands to use `npm` 3+ and `npx` if you like*
-
-
 ## Usage
 
 Add to your eslint config (`.eslintrc`, or `eslintConfig` field in `package.json`):

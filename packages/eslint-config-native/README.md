@@ -4,11 +4,8 @@
 ## Installation
 
 ```
-yarn add --dev eslint prettier @amorino/eslint-config-native
+npm i --dev eslint prettier @amorino/eslint-config-native
 ```
-
-*Note: I'm using `yarn` to install deps. Feel free to change commands to use `npm` 3+ and `npx` if you like*
-
 
 ## Usage
 

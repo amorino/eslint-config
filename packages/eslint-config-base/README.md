@@ -4,7 +4,7 @@
 ## Installation
 
 ```
-npm install --dev eslint prettier @amorino/eslint-config-base
+npm i --dev @amorino/eslint-config-base
 ```
 ## Usage
 
