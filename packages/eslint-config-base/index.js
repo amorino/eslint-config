@@ -20,14 +20,15 @@ module.exports = {
     process: true,
   },
 
-  plugins: ["import", "unicorn"],
+  plugins: ["import", "unicorn", "babel"],
 
   extends: [
+    "airbnb-base",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
     "plugin:unicorn/recommended",
     "plugin:prettier/recommended",
-    "plugin:import/typescript",
+    "plugin:import/typescript"
   ],
 
   settings: {
