@@ -97,28 +97,7 @@ module.exports = {
          * TypeScript plugin
          * The following rules are made available via `@typescript-eslint/eslint-plugin`.
          */
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/naming-convention": [
-          "error",
-          {
-            selector: "default",
-            format: ["strictCamelCase"],
-            leadingUnderscore: "forbid",
-            trailingUnderscore: "forbid",
-          },
-          {
-            selector: "typeLike",
-            format: ["PascalCase"],
-          },
-          {
-            selector: "variable",
-            format: ["strictCamelCase", "UPPER_CASE"],
-          },
-          {
-            selector: "enumMember",
-            format: ["StrictPascalCase"],
-          },
-        ],
+        "@typescript-eslint/explicit-module-boundary-types": "off"
       },
     },
   ],
