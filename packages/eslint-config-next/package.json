@@ -16,9 +16,7 @@
   "author": "Erick Bazán <erick.bazan@me.com>",
   "license": "MIT",
   "dependencies": {
-    "@amorino/eslint-config-base": "^1.0.23"
-  },
-  "peerDependencies": {
+    "@amorino/eslint-config-base": "^1.0.23",
     "eslint-config-next": "^12.0.7"
   },
   "repository": {
