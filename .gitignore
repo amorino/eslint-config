@@ -1,6 +1,10 @@
 # Third party
 **/node_modules
 
+# IntelliJ
+*.iml
+.idea/*
+
 # Build products
 build/
 coverage/
