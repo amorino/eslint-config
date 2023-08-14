@@ -1,6 +1,6 @@
 {
   "name": "@amorino/eslint-config-next",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "Personal ESLint config for Next.JS using TypeScript",
   "main": "index.js",
   "publishConfig": {
@@ -16,7 +16,7 @@
   "author": "Erick Bazán <erick.bazan@hey.com>",
   "license": "MIT",
   "dependencies": {
-    "@amorino/eslint-config-base": "^1.0.24",
+    "@amorino/eslint-config-base": "^2.0.0",
     "eslint-config-next": "^13.4.13"
   },
   "devDependencies": {
