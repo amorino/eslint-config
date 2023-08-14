@@ -1,5 +1,11 @@
 {
   "name": "@amorino/eslint-config-project",
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "build": "lerna run build",
+    "lint": "lerna run lint",
+    "type-check": "lerna run type-check"
+  },
   "private": true,
   "devDependencies": {
     "lerna": "^3.22.1"

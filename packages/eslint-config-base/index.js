@@ -17,12 +17,9 @@ module.exports = {
     process: true,
   },
 
-  plugins: ["import", "unicorn", "babel"],
+  plugins: ["import", "unicorn"],
 
-  extends: [
-    "plugin:unicorn/recommended",
-    "plugin:prettier/recommended",
-  ],
+  extends: ["plugin:unicorn/recommended", "plugin:prettier/recommended"],
 
   settings: {
     "import/parsers": {
@@ -59,9 +56,6 @@ module.exports = {
           param: false,
           params: false,
           args: false,
-          elm: {
-            element: true,
-          },
         },
         allowList: {
           attr: true,
@@ -97,7 +91,7 @@ module.exports = {
          * TypeScript plugin
          * The following rules are made available via `@typescript-eslint/eslint-plugin`.
          */
-        "@typescript-eslint/explicit-module-boundary-types": "off"
+        "@typescript-eslint/explicit-module-boundary-types": "off",
       },
     },
   ],

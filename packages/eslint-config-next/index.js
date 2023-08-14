@@ -1,6 +1,5 @@
 module.exports = {
   extends: [
-    "next",
     "next/core-web-vitals",
     require.resolve("@amorino/eslint-config-base"),
   ],
@@ -49,7 +48,7 @@ module.exports = {
             position: "before",
           },
           {
-            pattern: "~/**",
+            pattern: "@/**",
             group: "internal",
           },
         ],
