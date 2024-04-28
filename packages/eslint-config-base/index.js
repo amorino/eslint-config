@@ -39,8 +39,7 @@ module.exports = {
     "no-undef": "off",
     "no-underscore-dangle": "off",
     /**
-     * Import plugin
-     * The following rules are made available via `eslint-plugin-import`.
+     * eslint-plugin-import
      */
     "import/prefer-default-export": "off",
     "unicorn/prevent-abbreviations": [
@@ -88,8 +87,7 @@ module.exports = {
       ],
       rules: {
         /**
-         * TypeScript plugin
-         * The following rules are made available via `@typescript-eslint/eslint-plugin`.
+         * @typescript-eslint/eslint-plugin
          */
         "@typescript-eslint/explicit-module-boundary-types": "off",
       },
