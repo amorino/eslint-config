@@ -17,9 +17,9 @@ module.exports = {
     process: true,
   },
 
-  plugins: ["import", "unicorn"],
+  plugins: ["import"],
 
-  extends: ["plugin:unicorn/recommended", "plugin:prettier/recommended"],
+  extends: ["plugin:prettier/recommended"],
 
   settings: {
     "import/parsers": {
@@ -42,40 +42,6 @@ module.exports = {
      * eslint-plugin-import
      */
     "import/prefer-default-export": "off",
-    "unicorn/prevent-abbreviations": [
-      "error",
-      {
-        replacements: {
-          env: false,
-          ref: false,
-          refs: false,
-          prop: false,
-          props: false,
-          src: false,
-          param: false,
-          params: false,
-          args: false,
-        },
-        allowList: {
-          attr: true,
-          argTypes: true,
-        },
-        checkProperties: true,
-      },
-    ],
-    "unicorn/no-null": "off",
-    "unicorn/filename-case": [
-      "error",
-      {
-        cases: {
-          camelCase: true,
-          kebabCase: true,
-          pascalCase: true,
-        },
-      },
-    ],
-    "unicorn/prefer-module": "off",
-    "unicorn/no-abusive-eslint-disable": "off",
   },
   overrides: [
     {
